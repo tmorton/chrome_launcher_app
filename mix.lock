@@ -1,0 +1,2 @@
+%{"chrome_launcher": {:hex, :chrome_launcher, "0.0.4", "961186b9e861e6e9a78f6c5322cfa877fe16a212a4b088588a19498da429e5a4", [:mix], [{:erlexec, "~> 1.7", [hex: :erlexec, repo: "hexpm", optional: false]}], "hexpm"},
+  "erlexec": {:hex, :erlexec, "1.7.4", "f69091121625bc93e6dad4bb1b131e3e15bcb717ec40ec77c1de77b6823cc909", [:rebar3], [], "hexpm"}}
