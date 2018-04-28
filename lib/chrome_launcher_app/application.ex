@@ -5,12 +5,13 @@ defmodule ChromeLauncherApp.Application do
 
   use Application
 
-  def start(_type, _args) do
+  def start(_type, args) do
     import Supervisor.Spec, warn: false
 
-    # Define workers and child supervisors to be supervised
+    config = Application.get_env(:chrome_launcher_app, ChromeLauncherApp, [])
+    
     children = [
-      {ChromeLauncher, [remote_debugging_port: 9222]}
+      {ChromeLauncher, config}
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
@@ -18,4 +19,5 @@ defmodule ChromeLauncherApp.Application do
     opts = [strategy: :one_for_one, name: ChromeLauncherApp.Supervisor]
     Supervisor.start_link(children, opts)
   end
+
 end
