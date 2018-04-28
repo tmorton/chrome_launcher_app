@@ -1,6 +1,12 @@
 # ChromeLauncherApp
 
-**TODO: Add description**
+This is wrapper for [Chrome Launcher](https://github.com/andrewvy/chrome-launcher) that starts a headless chrome instance in an OTP application.  The Chrome Launcher package just provides a process that controls chrome.
+
+Why?  Because I want to use it with [HPDF](https://github.com/hassox/hpdf) in a Phoenix app.  Since HPDF provides an OTP application, and depends on Chrome already running when it starts, the easiest setup was to provide both as `extra_applications` for my Phoenix app.
+
+This is not yet published on Hex.
+
+**TODO**: Better setup docs if/when it's published.
 
 ## Installation
 
